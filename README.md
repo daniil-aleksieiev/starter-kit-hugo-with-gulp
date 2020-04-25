@@ -72,10 +72,11 @@ gulp-config.js -> theme
 ├── archetypes        #You can create new content files in Hugo using the `hugo new` command
 ├── content           #All content for your website will live inside this directory.
 ├── data              #This directory is used to store configuration files
-├── tasks             #Folder with tasks for gulpfile
+├── gulp-settings     #
+   ├── config.js      #Config for gulp
+   ├── tasks          #Folder with tasks for gulpfile
 ├── themes            #Folder with Hugo theme
 ├── config.toml       #Hugo ships with a large number of configuration directives
-├── gulp-config.js    #Config for gulp
 ├── gulpfile.js       #File with gulp tasks
 ├── LICENSE
 ├── package.json      #File with dependencies

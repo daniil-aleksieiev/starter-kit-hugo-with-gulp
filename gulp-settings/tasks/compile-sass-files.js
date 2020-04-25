@@ -3,30 +3,30 @@
  */
 'use strict';
 
-const gulp         = require('gulp'),
-      sass         = require('gulp-sass'),
-      gcmq         = require('gulp-group-css-media-queries'),
-      gulpif       = require('gulp-if'),
-      sourcemaps   = require('gulp-sourcemaps'),
-      autoprefixer = require('gulp-autoprefixer');
+const { src, dest } = require('gulp');
+const sass = require('gulp-sass');
+const gcmq = require('gulp-group-css-media-queries');
+const gulpif = require('gulp-if');
+const sourcemaps = require('gulp-sourcemaps');
+const autoprefixer = require('gulp-autoprefixer');
 
-module.exports = function(options) {
+module.exports = function (options) {
 
   return function (cb) {
     const { files, isGcmq } = options.sassFilesInfo;
 
     if (files.length > 0) {
-      return gulp.src(files)
+      return src(files)
         .pipe(sourcemaps.init({
           loadMaps: true
         }))
-        .pipe(sass().on('error', function(err) {
+        .pipe(sass().on('error', function (err) {
           options.showError.apply(this, ['Sass compile error', err]);
         }))
         .pipe(gulpif(isGcmq, gcmq()))
         .pipe(autoprefixer(options.versions))
         .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(`./themes/${options.theme}/${options.dest}/css`));
+        .pipe(dest(`./themes/${options.theme}/${options.dest}/css`));
     } else {
       return cb();
     }

@@ -8,14 +8,14 @@ import hljs from 'highlight.js/lib/highlight';
 import javascript from 'highlight.js/lib/languages/javascript';
 import pageTransition from './modules/pageTransition';
 import hamburger from './modules/hamburger';
-import pageScroll from './modules/pageScroll';
+// import pageScroll from './modules/pageScroll';
 
 (($) => {
   // When DOM is ready
   $(() => {
     pageTransition.transition();
     $('#currentYear').text(`${new Date().getFullYear()}`);
-    pageScroll.smoothScrolling();
+    // pageScroll.smoothScrolling();
     hamburger.handler();
     hljs.registerLanguage('javascript', javascript);
     hljs.initHighlightingOnLoad();

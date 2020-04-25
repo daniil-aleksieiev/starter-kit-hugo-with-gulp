@@ -1,14 +1,12 @@
 (() => {
   'use strict';
 
-  const cfg = require('./gulp-config.js'),
-    self = this,
-    gulp = require('gulp'),
-    del = require('del'),
-    path = require('path'),
-    notifier = require('node-notifier'),
-    gutil = require('gulp-util'),
-    shell = require('gulp-shell');
+  const cfg = require('./gulp-settings/config.js');
+  const self = this;
+  const { task, series, parallel } = require('gulp');
+  const notifier = require('node-notifier');
+  const gutil = require('gulp-util');
+  const shell = require('gulp-shell');
 
   /**
    * Require gulp task from file
@@ -17,11 +15,11 @@
    * @param  {Object} options      Options for task
    * @param  {Array}  dependencies Task dependencies
    */
-  function requireTask(taskName, path, options, dependencies) {
+  function requireTask(taskName, options, dependencies) {
     let settings = options || {};
     const taskFunction = function (callback) {
 
-      let task = require(path + taskName + '.js').call(this, settings);
+      let task = require(`./${cfg.folder.tasks}/${taskName}.js`).call(this, settings);
 
       return task(callback);
     }
@@ -29,19 +27,18 @@
     settings.taskName = taskName;
 
     if (!Array.isArray(dependencies)) {
-      gulp.task(taskName, taskFunction);
+      task(taskName, taskFunction);
     } else if (dependencies.length === 1) {
-      gulp.task(taskName, gulp.series(dependencies[0], taskFunction));
+      task(taskName, series(dependencies[0], taskFunction));
     } else {
-      gulp.task(taskName, gulp.series(dependencies, taskFunction));
+      task(taskName, series(dependencies, taskFunction));
     }
   }
 
   /**
    * Lint ES
    */
-
-  requireTask(`${cfg.task.esLint}`, `./${cfg.folder.tasks}/`, {
+  requireTask(`${cfg.task.esLint}`, {
     src: cfg.folder.src,
     theme: cfg.folder.theme
   });
@@ -49,7 +46,7 @@
   /**
    * Build custom js
    */
-  requireTask(`${cfg.task.buildCustomJs}`, `./${cfg.folder.tasks}/`, {
+  requireTask(`${cfg.task.buildCustomJs}`, {
     src: cfg.folder.src,
     dest: cfg.folder.build,
     theme: cfg.folder.theme,
@@ -60,7 +57,7 @@
   /**
    * Build js vendor (concatenate vendors array)
    */
-  requireTask(`${cfg.task.buildJsVendors}`, `./${cfg.folder.tasks}/`, {
+  requireTask(`${cfg.task.buildJsVendors}`, {
     src: cfg.folder.src,
     dest: cfg.folder.build,
     theme: cfg.folder.theme,
@@ -71,7 +68,7 @@
   /**
    * Build styles for application from SASS
    */
-  requireTask(`${cfg.task.buildSass}`, `./${cfg.folder.tasks}/`, {
+  requireTask(`${cfg.task.buildSass}`, {
     src: cfg.folder.src,
     dest: cfg.folder.build,
     theme: cfg.folder.theme,
@@ -85,7 +82,7 @@
   /**
    * Compile scss files listed in the config
    */
-  requireTask(`${cfg.task.buildSassFiles}`, `./${cfg.folder.tasks}/`, {
+  requireTask(`${cfg.task.buildSassFiles}`, {
     sassFilesInfo: cfg.getPathesForSassCompiling(),
     dest: cfg.folder.build,
     theme: cfg.folder.theme,
@@ -97,7 +94,7 @@
   /**
    * Build styles for vendor from SASS
    */
-  requireTask(`${cfg.task.buildStylesVendors}`, `./${cfg.folder.tasks}/`, {
+  requireTask(`${cfg.task.buildStylesVendors}`, {
     src: cfg.folder.src,
     dest: cfg.folder.build,
     theme: cfg.folder.theme,
@@ -109,7 +106,7 @@
   /**
    * Clean build folder
    */
-  requireTask(`${cfg.task.cleanBuild}`, `./${cfg.folder.tasks}/`, {
+  requireTask(`${cfg.task.cleanBuild}`, {
     src: cfg.folder.build,
     theme: cfg.folder.theme
   });
@@ -117,17 +114,17 @@
   /**
    * Clean public dir
    */
-  gulp.task(`${cfg.task.cleanPublic}`, shell.task('rm -rf public'));
+  task(`${cfg.task.cleanPublic}`, shell.task('rm -rf public'));
 
   /**
    * Build Hugo
    */
-  gulp.task(`${cfg.task.buildHugo}`, shell.task('hugo'));
+  task(`${cfg.task.buildHugo}`, shell.task('hugo'));
 
   /**
    * Watch for file changes
    */
-  requireTask(`${cfg.task.watch}`, `./${cfg.folder.tasks}/`, {
+  requireTask(`${cfg.task.watch}`, {
     sassFilesInfo: cfg.getPathesForSassCompiling(),
     src: cfg.folder.src,
     dest: cfg.folder.build,
@@ -143,12 +140,12 @@
   /**
    * Default Gulp task
    */
-  gulp.task('default', gulp.series(
-    gulp.parallel(
+  task('default', series(
+    parallel(
       cfg.task.cleanBuild,
       cfg.task.cleanPublic
     ),
-    gulp.parallel(
+    parallel(
       cfg.task.buildCustomJs,
       cfg.task.buildJsVendors,
       cfg.task.buildSass,
@@ -156,29 +153,14 @@
       cfg.task.buildStylesVendors,
       cfg.task.esLint
     ),
-    cfg.task.buildHugo,
-    gulp.parallel(
+    series(
+      cfg.task.buildHugo,
       cfg.task.watch
     )
-  ));
-
-  /**
-   * Build task
-   */
-  gulp.task('build', gulp.series(
-    gulp.parallel(
-      cfg.task.cleanBuild,
-      cfg.task.cleanPublic
-    ),
-    gulp.parallel(
-      cfg.task.buildCustomJs,
-      cfg.task.buildJsVendors,
-      cfg.task.buildSass,
-      cfg.task.buildSassFiles,
-      cfg.task.buildStylesVendors,
-      cfg.task.esLint
-    ),
-    cfg.task.buildHugo
+    // cfg.task.buildHugo,
+    // parallel(
+    //   cfg.task.watch
+    // )
   ));
 
   /**

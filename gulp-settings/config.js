@@ -1,6 +1,6 @@
 module.exports = {
   folder: {
-    tasks: 'tasks',
+    tasks: 'gulp-settings/tasks',
     src: 'src',
     build: 'assets',
     theme: 'project_theme'
@@ -33,6 +33,6 @@ module.exports = {
     return {
       files: [],
       isGcmq: false
-     };
+    };
   }
 };
