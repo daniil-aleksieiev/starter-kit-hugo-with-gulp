@@ -7,7 +7,6 @@ sections:
 - type: document
   path: content/blog/_index.md
   label: TEST
-  match: "**/*"
 - type: directory
   path: data
   label: Data
