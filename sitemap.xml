@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/blog/posts/test-post-from-foresty/</loc>
+    <lastmod>2019-10-24T21:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/blog/posts/js/</loc>
+    <lastmod>2019-07-04T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/blog/posts/mixins/</loc>
+    <lastmod>2019-07-03T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/blog/posts/npm-hgsk/</loc>
+    <lastmod>2019-07-02T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/blog/posts/hgsk/</loc>
+    <lastmod>2019-07-01T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/blog/</loc>
+    <lastmod>2019-10-24T21:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/category/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/</loc>
+    <lastmod>2019-10-24T21:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/category/javascript/</loc>
+    <lastmod>2019-07-04T00:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/category/production/</loc>
+    <lastmod>2019-07-02T00:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/category/sass/</loc>
+    <lastmod>2019-07-03T00:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/category/uncategorized/</loc>
+    <lastmod>2019-10-24T21:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Production on Hugo with Gulp starter kit</title>
+    <link>https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/category/production/</link>
+    <description>Recent content in Production on Hugo with Gulp starter kit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 02 Jul 2019 00:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/category/production/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>NPM HGSK</title>
+      <link>https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/blog/posts/npm-hgsk/</link>
+      <pubDate>Tue, 02 Jul 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/blog/posts/npm-hgsk/</guid>
+      <description>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &amp;lsquo;Content here, content here&amp;rsquo;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &amp;lsquo;lorem ipsum&amp;rsquo; will uncover many web sites still in their infancy.</description>
+    </item>
+    
+    <item>
+      <title>HGSK</title>
+      <link>https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/blog/posts/hgsk/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/blog/posts/hgsk/</guid>
+      <description>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</description>
+    </item>
+    
+  </channel>
+</rss>

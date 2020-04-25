@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Hugo with Gulp starter kit</title>
+    <link>https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/</link>
+    <description>Recent content in Home on Hugo with Gulp starter kit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 Oct 2019 21:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Test post from Foresty</title>
+      <link>https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/blog/posts/test-post-from-foresty/</link>
+      <pubDate>Thu, 24 Oct 2019 21:00:00 +0000</pubDate>
+      
+      <guid>https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/blog/posts/test-post-from-foresty/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/blog/posts/js/</link>
+      <pubDate>Thu, 04 Jul 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/blog/posts/js/</guid>
+      <description>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</description>
+    </item>
+    
+    <item>
+      <title>Mixins</title>
+      <link>https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/blog/posts/mixins/</link>
+      <pubDate>Wed, 03 Jul 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/blog/posts/mixins/</guid>
+      <description>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.</description>
+    </item>
+    
+    <item>
+      <title>NPM HGSK</title>
+      <link>https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/blog/posts/npm-hgsk/</link>
+      <pubDate>Tue, 02 Jul 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/blog/posts/npm-hgsk/</guid>
+      <description>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &amp;lsquo;Content here, content here&amp;rsquo;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &amp;lsquo;lorem ipsum&amp;rsquo; will uncover many web sites still in their infancy.</description>
+    </item>
+    
+    <item>
+      <title>HGSK</title>
+      <link>https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/blog/posts/hgsk/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://daniil-aleksieiev.github.io/starter-kit-hugo-with-gulp/blog/posts/hgsk/</guid>
+      <description>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</description>
+    </item>
+    
+  </channel>
+</rss>
