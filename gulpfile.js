@@ -157,10 +157,25 @@
       cfg.task.buildHugo,
       cfg.task.watch
     )
-    // cfg.task.buildHugo,
-    // parallel(
-    //   cfg.task.watch
-    // )
+  ));
+
+  /**
+   * Build task
+   */
+  task('build', series(
+    parallel(
+      cfg.task.cleanBuild,
+      cfg.task.cleanPublic
+    ),
+    parallel(
+      cfg.task.buildCustomJs,
+      cfg.task.buildJsVendors,
+      cfg.task.buildSass,
+      cfg.task.buildSassFiles,
+      cfg.task.buildStylesVendors,
+      cfg.task.esLint
+    ),
+    cfg.task.buildHugo
   ));
 
   /**
